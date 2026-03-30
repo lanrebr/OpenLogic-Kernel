@@ -1,0 +1,11 @@
+{
+  "ucid": "UCID_PRI_002",
+  "canonical_name": "OBSERVE_DATA",
+  "domains": ["SENSORY", "DATA_SCIENCE"],
+  "logic_definition": "CAPTURE(SIGNAL) from SOURCE(ENVIRONMENT) -> DATA_STREAM",
+  "legacy_aliases": ["observe", "watch", "see", "monitor", "measure"],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "OLK-Bootstrap"
+  }
+}
