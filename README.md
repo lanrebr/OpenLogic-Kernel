@@ -88,3 +88,26 @@ OLK is Open Source. We believe no one should own the "Dictionary of Truth."
 - Submit a Pull Request: If an AI-suggested term is biased or inaccurate, "patch" the logic.
 - The "Merge" Rule: Once a concept is verified and has no overlapping aliases, it is merged into the Main branch as a "Global Standard."
 
+  ## 6. How the Kernel is Used: The Resolution Engine
+
+The OLK acts as a "Headless Dictionary." Instead of humans reading it, software and AI use it to resolve ambiguity *before* reasoning begins.
+
+### The Resolution Pipeline:
+1. **Tokenization:** The system receives a raw string: *"Is the proof sufficient?"*
+2. **Contextual Tagging:** The AI identifies surrounding tokens (e.g., "yeast", "flour", "oven").
+3. **Kernel Mapping:** The system queries `concepts/` to find a match. 
+   - It sees "proof" exists in `CULINARY`, `MATHEMATICS`, and `CHEMISTRY`.
+   - Based on "yeast," it selects `UCID_CUL_001`.
+4. **Logic Injection:** The system replaces the ambiguous word with the `logic_definition`:
+   - *Result:* "Is the `VERIFY(ACTIVE_YEAST) via OBSERVE(CO2_EXPANSION)` sufficient?"
+
+### Benefit: Zero Hallucination
+By using the **UCID**, the AI cannot accidentally apply mathematical logic to a baking problem. The "Probability Cloud" of English is bypassed entirely in favor of the "Logic Anchor" of the Kernel.
+
+## 7. Immediate Roadmap (Phase 1: The Bootstrap)
+
+To make this repo operational, we are currently working on:
+*   **[ ] Primitives Library:** Defining core logic blocks like `VERIFY`, `MEASURE`, and `DEDUCT`.
+*   **[ ] Mapping Script (`translator.py`):** A Python utility to demonstrate English-to-UCID translation.
+*   **[ ] Ambiguity Expansion:** Identifying and untangling the "Top 100" most resource-heavy English words (e.g., *Bank, Right, Scale, Lead*).
+
