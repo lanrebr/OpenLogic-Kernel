@@ -2,10 +2,10 @@
   "ucid": "UCID_CHM_001",
   "canonical_name": "ETHANOL_CONTENT_MEASUREMENT",
   "domains": ["CHEMISTRY", "DISTILLING"],
-  "logic_definition": "RATIO(ETHANOL_VOLUME, TOTAL_VOLUME) * 2",
+  "logic_definition": "UCID_PRI_002(ETHANOL_VOLUME) / UCID_PRI_002(TOTAL_VOLUME) * 2",
   "legacy_aliases": ["proof", "alcohol proof"],
   "metadata": {
-    "version": "1.0.0",
-    "author": "OLK-Bootstrap"
+    "version": "1.1.0",
+    "author": "OLK-Refactor"
   }
 }
