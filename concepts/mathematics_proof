@@ -1,0 +1,11 @@
+{
+  "ucid": "UCID_MAT_001",
+  "canonical_name": "FORMAL_LOGICAL_DEDUCTION",
+  "domains": ["MATHEMATICS", "LOGIC"],
+  "logic_definition": "CHAIN(LOGICAL_STEPS) where (STEP_N + AXIOM) -> TRUE",
+  "legacy_aliases": ["proof", "mathematical proof"],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "OLK-Bootstrap"
+  }
+}
