@@ -121,3 +121,14 @@ Instead of defining "Baking Proof" with ambiguous words, we use the **UCID** of 
 - **Precise Logic:** `UCID_PRI_001` (Verify) + `UCID_PRI_002` (Observe)
 
 This creates a **computational hierarchy** where the AI only needs to deeply understand the ~100 core primitives to interpret every complex concept in the repository.
+
+## 9. Using the Translator
+We have provided a `translator.py` script to demonstrate the **Resolution Engine** in action.
+
+### How to run:
+1. Ensure your `/concepts` folder is populated with JSON files.
+2. Run the script: `python translator.py`
+
+### Expected Output:
+- **Input:** *"Check the proof of the sourdough."*
+- **OLK Output:** *"Check the [UCID_CUL_001: UCID_PRI_001(ACTIVE_YEAST) via UCID_PRI_002(CO2_EXPANSION)] of the sourdough."*
