@@ -49,6 +49,10 @@ Every entry in this repository must follow a strict JSON schema to ensure it is 
   }
 }
 ```
+Purpose of this Schema
+- Validation: Every time a contributor adds a new concept, this schema validates that they haven't left out critical logic, such as the logic_definition.
+- No Overlap: It forces a ucid pattern (e.g., UCID_MAT_001) to ensure the AI doesn't mix up the "math" proof with the "baking" proof.
+- Standardization: It allows the automated "linter" to instantly translate messy text into the canonical_name.
 
 ### Step 2: The "Version 1.0" Scan
 We will deploy an AI agent to scan the last 20 years of the internet—manuals, social media, and literature—to:
