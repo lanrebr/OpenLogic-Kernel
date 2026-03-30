@@ -35,7 +35,7 @@ Instead of forcing AI to learn our messy habits, we create a **Unique Concept ID
 ### Step 1: The Global Schema
 Every entry in this repository must follow a strict JSON schema to ensure it is machine-readable and logically sound.
 
-**`schema.json` Design:**
+**`schema.json` Design:** [schema.json](schema.json)
 ```json
 {
   "ucid": "UNIQUE_ID_STRING",
