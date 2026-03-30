@@ -1,0 +1,11 @@
+{
+  "ucid": "UCID_PRI_003",
+  "canonical_name": "LOGICAL_DEDUCTION",
+  "domains": ["MATHEMATICS", "LOGIC"],
+  "logic_definition": "IF (PREMISE == TRUE) AND (RULE == VALID) THEN (CONCLUSION = TRUE)",
+  "legacy_aliases": ["deduce", "infer", "derive", "reason"],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "OLK-Bootstrap"
+  }
+
