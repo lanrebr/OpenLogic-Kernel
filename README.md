@@ -88,18 +88,19 @@ OLK is Open Source. We believe no one should own the "Dictionary of Truth."
 - Submit a Pull Request: If an AI-suggested term is biased or inaccurate, "patch" the logic.
 - The "Merge" Rule: Once a concept is verified and has no overlapping aliases, it is merged into the Main branch as a "Global Standard."
 
-  ## 6. How the Kernel is Used: The Resolution Engine
+## 6. How the Kernel is Used: The Resolution Engine
 
 The OLK acts as a "Headless Dictionary." Instead of humans reading it, software and AI use it to resolve ambiguity *before* reasoning begins.
 
 ### The Resolution Pipeline:
 1. **Tokenization:** The system receives a raw string: *"Is the proof sufficient?"*
-2. **Contextual Tagging:** The AI identifies surrounding tokens (e.g., "yeast", "flour", "oven").
-3. **Kernel Mapping:** The system queries `concepts/` to find a match. 
-   - It sees "proof" exists in `CULINARY`, `MATHEMATICS`, and `CHEMISTRY`.
-   - Based on "yeast," it selects `UCID_CUL_001`.
-4. **Logic Injection:** The system replaces the ambiguous word with the `logic_definition`:
-   - *Result:* "Is the `VERIFY(ACTIVE_YEAST) via OBSERVE(CO2_EXPANSION)` sufficient?"
+2. **Contextual Tagging:** The AI identifies surrounding context (e.g., "yeast", "flour").
+3. **Kernel Mapping:** The system queries `concepts/` and matches "proof" to `UCID_CUL_001` based on the domain.
+4. **Logic Injection:** The system replaces the word with the internal `logic_definition`.
+   - *Result:* "Is the `UCID_PRI_001(ACTIVE_YEAST) via UCID_PRI_002(CO2_EXPANSION)` sufficient?"
+
+### Benefit: Atomic Reasoning
+By linking complex concepts to **Primitives**, the AI only needs to deeply understand the ~100 core logic primitives to interpret every complex concept in the repository. This eliminates the "heavy load" of context-
 
 ### Benefit: Zero Hallucination
 By using the **UCID**, the AI cannot accidentally apply mathematical logic to a baking problem. The "Probability Cloud" of English is bypassed entirely in favor of the "Logic Anchor" of the Kernel.
