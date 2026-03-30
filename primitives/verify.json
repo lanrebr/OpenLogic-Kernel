@@ -1,0 +1,11 @@
+{
+  "ucid": "UCID_PRI_001",
+  "canonical_name": "VERIFY_STATE",
+  "domains": ["LOGIC", "UNIVERSAL"],
+  "logic_definition": "INPUT(TARGET_STATE) + COMPARE(CURRENT_OBSERVATION) -> BOOLEAN(MATCH)",
+  "legacy_aliases": ["verify", "check", "test", "confirm"],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "OLK-Bootstrap"
+  }
+}
