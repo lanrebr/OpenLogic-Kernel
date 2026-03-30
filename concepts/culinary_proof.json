@@ -1,0 +1,11 @@
+{
+  "ucid": "UCID_CUL_001",
+  "canonical_name": "DOUGH_FERMENTATION_TEST",
+  "domains": ["CULINARY", "BAKING"],
+  "logic_definition": "VERIFY(ACTIVE_YEAST) via OBSERVE(CO2_EXPANSION)",
+  "legacy_aliases": ["proof", "proofing", "proving"],
+  "metadata": {
+    "version": "1.0.0",
+    "author": "OLK-Bootstrap"
+  }
+}
