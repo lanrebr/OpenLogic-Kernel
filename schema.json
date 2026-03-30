@@ -1,0 +1,42 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OpenLogic Concept Schema",
+    "description": "The foundational rules for defining a Unique Concept ID (UCID) in the OpenLogic-Kernel.",
+    "type": "object",
+    "properties": {
+        "ucid": {
+            "type": "string",
+            "description": "A unique, immutable identifier (e.g., UCID_CUL_001).",
+            "pattern": "^UCID_[A-Z]{3}_[0-9]{3,6}$"
+        },
+        "canonical_name": {
+            "type": "string",
+            "description": "A precise, snake_case name for the concept (e.g., DOUGH_FERMENTATION_TEST).",
+            "pattern": "^[A-Z0-9_]+$"
+        },
+        "domains": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "The specific field(s) where this concept applies."
+        },
+        "logic_definition": {
+            "type": "string",
+            "description": "A formal logic or pseudo-code expression defining the concept's boundaries."
+        },
+        "legacy_aliases": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Ambiguous natural language words that map to this UCID (e.g., ['proof', 'rising'])."
+        },
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "version": { "type": "string" },
+                "author": { "type": "string" },
+                "source_material": { "type": "string" }
+            },
+            "required": ["version"]
+        }
+    },
+    "required": ["ucid", "canonical_name", "domains", "logic_definition", "legacy_aliases", "metadata"]
+}
