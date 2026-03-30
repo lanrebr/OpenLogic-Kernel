@@ -111,3 +111,12 @@ To make this repo operational, we are currently working on:
 *   **[ ] Mapping Script (`translator.py`):** A Python utility to demonstrate English-to-UCID translation.
 *   **[ ] Ambiguity Expansion:** Identifying and untangling the "Top 100" most resource-heavy English words (e.g., *Bank, Right, Scale, Lead*).
 
+
+f## 8. Atomic Dependency: The Primitive Laye
+To ensure the kernel remains modular, complex concepts are built using **Primitive Nodes** (`/concepts/primitives/`). 
+
+Instead of defining "Baking Proof" with ambiguous words, we use the **UCID** of the underlying logic:
+- **Concept:** `DOUGH_FERMENTATION_TEST`
+- **Precise Logic:** `UCID_PRI_001` (Verify) + `UCID_PRI_002` (Observe)
+
+This creates a **computational hierarchy** where the AI only needs to deeply understand the ~100 core primitives to interpret every complex concept in the repository.
